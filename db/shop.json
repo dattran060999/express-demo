@@ -1,0 +1,53 @@
+{
+    "name": "Gian Hàng",
+    "desc": "Bạn có thể mua mọi thứ ở đây",
+    "list": [{
+            "title": "Apple",
+            "price": "$56",
+            "desc": "Bạn có thể mua nó ở đây",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/69783/iphone-6-plus-16gb-14-300x300.jpg"
+        },
+        {
+            "title": "Apple",
+            "price": "$56",
+            "desc": "Bạn có thể mua nó ở đây",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/69783/iphone-6-plus-16gb-14-300x300.jpg"
+        },
+        {
+            "title": "Apple",
+            "price": "$56",
+            "desc": "Bạn có thể mua nó ở đây",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/69783/iphone-6-plus-16gb-14-300x300.jpg"
+        },
+        {
+            "title": "Apple",
+            "price": "$56",
+            "desc": "Bạn có thể mua nó ở đây",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/69783/iphone-6-plus-16gb-14-300x300.jpg"
+        },
+        {
+            "title": "Apple",
+            "price": "$56",
+            "desc": "Bạn có thể mua nó ở đây",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/69783/iphone-6-plus-16gb-14-300x300.jpg"
+        },
+        {
+            "title": "Apple",
+            "price": "$56",
+            "desc": "Bạn có thể mua nó ở đây",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/69783/iphone-6-plus-16gb-14-300x300.jpg"
+        },
+        {
+            "title": "Apple",
+            "price": "$56",
+            "desc": "Bạn có thể mua nó ở đây",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/69783/iphone-6-plus-16gb-14-300x300.jpg"
+        },
+        {
+            "title": "Apple",
+            "price": "$56",
+            "desc": "Bạn có thể mua nó ở đây",
+            "img": "https://cdn.tgdd.vn/Products/Images/42/69783/iphone-6-plus-16gb-14-300x300.jpg"
+        }
+    ]
+}

@@ -8,6 +8,7 @@ var sassMiddleware = require('node-sass-middleware');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var aboutRouter = require('./routes/about');
+var shopRouter = require('./routes/shop');
 // Khởi tạo APP
 var app = express();
 // Gọi Template
@@ -18,35 +19,36 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(sassMiddleware({
-  src: path.join(__dirname, 'styles'),
-  dest: path.join(__dirname, 'public/css'),
-  indentedSyntax: true, // true = .sass and false = .scss
-  sourceMap: app.get('env') === 'development' ? false : true
+    src: path.join(__dirname, 'styles'),
+    dest: path.join(__dirname, 'public/css'),
+    indentedSyntax: true, // true = .sass and false = .scss
+    sourceMap: app.get('env') === 'development' ? false : true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 // Init App
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/about', aboutRouter);
+app.use('/shop', shopRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-	if(req.app.get('env') === 'dev') {
-		next(createError(404));
-	} else{
-		res.status(400);
-		res.render('404.pug', { title: "404 We're sorry!", desc: "We couldn't find what you're looking for", btn: "» Go back to the main page" });
-	}
+    if (req.app.get('env') === 'dev') {
+        next(createError(404));
+    } else {
+        res.status(400);
+        res.render('404.pug', { title: "404 We're sorry!", desc: "We couldn't find what you're looking for", btn: "» Go back to the main page" });
+    }
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'dev' ? err : {};
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'dev' ? err : {};
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 module.exports = app;

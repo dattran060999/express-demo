@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= data.name
+	p= data.desc
+	.container
+		.row
+			- for(var x=0;x<data.list.length;x++)
+				.col-md-3
+					img.img-fluid(src=data.list[x].img, alt="")
+					h1= data.list[x].title
+					p=data.list[x].price
+					p=data.list[x].desc
