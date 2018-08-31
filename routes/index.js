@@ -5,11 +5,11 @@ var fs = require('fs');
 router.get('/', function(req, res, next) {
     var obj;
     fs.readFile('./db/home.json', "utf8", function(err, data) {
-            // if (err) throw err;
-            // obj=JSON.parse(data)
-            console.log(data)
-        })
-        // res.render('index', { title: 'FullStack Vietnam' });
+        if (err) throw err;
+        obj = JSON.parse(data);
+        res.render('index', data.obj);
+    })
+
 });
 
 module.exports = router;
