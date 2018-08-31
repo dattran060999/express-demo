@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     fs.readFile('./db/home.json', "utf8", function(err, data) {
         if (err) throw err;
         obj = JSON.parse(data);
-        res.render('index', data.obj);
+        res.render('index', { data: obj });
     })
 
 });
